@@ -8,14 +8,14 @@ mixin tabs(tab_x, tab_name, tab_content_x)
 				block
 
 //- var bg_img= '../img/bg_img.png';
-mixin unit_download(bg_img, link='#')
+mixin unit_download(bg_img, f_name, file_description, link='#')
 	.wrap_file_list
 		.file_unit(style="background: url(" + bg_img + ");")
 			.shadow_box
-				span Лабораторная работа №1
+				span #{f_name}
 				|
 				|
-			.file_description Интерфейс программы Компас 3D. Компактная панель. 
+			.file_description #{file_description}
 			.ul_buttons
 				ul
 					li.open
