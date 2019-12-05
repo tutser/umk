@@ -1,0 +1,40 @@
+include includes/mixins
+<!DOCTYPE html>
+html(lang="ru")
+	include includes/head
+	body
+		.wrapper
+			.sidebar
+				include includes/unit_login
+				include includes/sidebar_menu
+				+sidebar "checked"
+			div(class="right_unit", class="right_unit-normdoc")
+				p Теоретический материал
+				.wrap_tab
+					ul.tabs(role="tablist")
+						+tabs('tab1', 'Самостоятельные работы', 'tab-content1')
+							+unit_download('#', 'Конспект', '"Знакомство с Компас 3D. Интерфейс программы"', 'files/teormat/kospect1.pdf')
+							+unit_download('#', 'Конспект', '"Основы 3D моделирования"', 'files/teormat/kospect1.pdf')
+						+tabs('tab2', 'Тренировочные задания', 'tab-content2')
+							+unit_download('#','Презентация', '"Компас. САПР."', '../files/teormat/kompass_SAPR.pptx')
+							+unit_download('#','Презентация', '"Моделирование 3D"', '../files/teormat/model_3D.ppt')
+						
+							
+					 
+
+						
+
+
+
+		include includes/scripts_in_footer
+		script.
+			$(document).ready(function () {
+			$('#sb_ml-4').prop('checked',true);
+
+			$("a#sub_menu_4-1").attr("href", "#");
+			$("a#sub_menu_4-2").attr("href", "#");
+			
+			
+			});
+
+
