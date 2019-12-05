@@ -1,0 +1,22 @@
+mixin wrap_unit_download(bg_img="111111", link="22222")
+	.wrap_file_list
+		.file_unit(style=bg_img)
+			.ul_buttons
+				ul
+					li.open
+						a(href=link type="application/pdf" target="_blank")
+							| Открыть
+					li.download
+						a(href=link type="application/pdf" download)
+							| Скачать
+
+mixin xxx(link)
+	.class1(style='background-color: ' + link +';')
+
+
+
++wrap_unit_download('','2')
+
+
+
++xxx('red')

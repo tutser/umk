@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>УМК</title>
+	<meta charset="UTF-8">
+		<link rel="shortcut icon" type="image/x-icom" href="favicon.ico">
+		<link rel="stylesheet" href="css/reset.css" media="all">
+		<link rel="stylesheet" href="css/all.css" media="all">
+		<link rel="stylesheet" href="css/main.css" media="screen">
+		<link rel="stylesheet" href="css/slickQuiz.css" media="screen"  type="text/css">
+		<!-- <link rel="stylesheet" href="css/master.css" media="screen"  type="text/css"> -->
+		<link rel="stylesheet" href="css/test-style.css" media="all">
+</head>
+<body>
+
+<div class="wrapper">
+
+	<div class="sidebar">
+	
+
+<!-- ---------- Блок Логин и кнопка сворачивания sidebar ------------------- -->
+<div class="wrap_unit_login">
+	<div class="unit-login">
+			<div class="user-avatar"><a href="index.html"><img src="./img/umk_logo.png" width="80" height="80" alt=""></a></div>
+			<div class="wrap-btns">
+				<div class="login-btn"><a href="#">Вход</a></div>
+				<div class="registr-btn"><a href="#">Регистрация</a></div>
+			</div>
+	</div>
+</div>
+
+<div class="wrap_menu-btn">
+	<a href="#" class="menu-btn"><span></span>
+		<div class="menu-lable_hidden">Меню</div>
+	</a>
+</div>
+<!-- ---------- Блок Логин и кнопка сворачивания sidebar (end) -------------- -->
+<!-- ---------------- Accordion Menu --------------------- -->
+<div class="sidebar_menu_list">
+						
+	<div>
+    <input id="sb_ml-1" name="sidebar_menu-1" type="checkbox" />
+    <label for="sb_ml-1" class="label_sb_ml">Нормативные документы</label>
+    
+  
+    <article class="sb_ml submenu-1">
+      <ul>
+				<li><a href="normdoc.html" id="sub_menu_1-1">ФГОС</a></li>
+				<li><a href="normdoc.html" id="sub_menu_1-2">Стандарт</a></li>
+				<li><a href="normdoc.html" id="sub_menu_1-3">Рабочая программа</a></li>
+			</ul>
+    </article>
+  </div>
+  <div>
+    <input id="sb_ml-2" name="sidebar_menu-2" type="checkbox" />
+    <label for="sb_ml-2" class="label_sb_ml">Теоретический материал</label>
+    
+  
+    <article class="sb_ml submenu-2">
+      <ul>
+				<li><a href="teormat.html" id="sub_menu_2-1">Конспекты</a></li>
+				<li><a href="teormat.html" id="sub_menu_2-2">Презентации</a></li>
+			</ul>
+    </article>
+  </div>
+  <div>
+    <input id="sb_ml-3" name="sidebar_menu-3" type="checkbox" checked/>
+    <label for="sb_ml-3" class="label_sb_ml">Контроль знаний</label>
+    
+  
+    <article class="sb_ml submenu-3">
+      <ul>
+				<li><a href="control.html" id="sub_menu_3-1">Контрольная работа</a></li>
+				<li><a href="#" id="sub_menu_3-2">Тест</a></li>
+			</ul>
+    </article>
+  </div>
+  <div>
+    <input id="sb_ml-4" name="sidebar_menu-4" type="checkbox" />
+    <label for="sb_ml-4" class="label_sb_ml">Самостоятельные работы</label>
+    
+  
+    <article class="sb_ml submenu-4">
+      <ul>
+				<li><a href="samrab.html" id="sub_menu_4-1">Задания для сам. работ</a></li>
+				<li><a href="samrab.html" id="sub_menu_4-2">Тренировочные задания</a></li>
+			</ul>
+    </article>
+  </div>
+  <div>
+    <input id="sb_ml-5" name="sidebar_menu-5" type="checkbox" />
+    <label for="sb_ml-5" class="label_sb_ml">Практические работы</label>
+    
+  
+    <article class="sb_ml submenu-5">
+      <ul>
+				<li><a href="practicrab.html" id="sub_menu_5-1">Лабораторные работы</a></li>
+			</ul>
+    </article>
+  </div>
+									
+			
+
+
+		 </div>		
+<!-- ---------------- Accordion Menu (end) --------------------- -->		 
+
+
+	</div>			<!-- sidebar -->
+	<div class="right_unit ru_control-test">
+	
+<p>Тест по дисциплине «Компьютерная графика»</p>
+
+<!-- ------------ Вкладки --------------------------------	-->
+		
+
+
+
+
+
+
+
+
+
+
+ <!-- ------------ Скрипт теста ----------------- -->
+<div class="wrap_test_unit">
+	<div>
+	<div id="slickQuiz" class="test_unit">
+      
+  		<h1 class="quizName"><!-- Название Викторины --></h1>
+
+  		<div class="quizArea">
+     		<div class="quizHeader"><!--  Функциональная часть Викторины -->
+        	<a class="button startQuiz" href="#">Начать тестирование</a>
+      	</div><!-- Здесь строится Викторина -->
+      </div>
+
+      <div class="quizResults">
+      
+        <h3 class="quizScore">Ваша оценка: <span><!-- Отображение оценки теста --></span></h3>
+        <h3 class="quizLevel"><strong>Рейтинг:</strong> <span><!-- Рейтинг --></span></h3>
+
+        <div class="quizResultsCopy">
+                <!-- Копия результата теста -->
+        </div>
+      </div>
+
+
+
+	</div>  	
+</div>
+</div>
+
+<!-- ------------ Скрипт теста (end) ----------------- -->
+
+
+
+
+
+<!-- <div class="wrap_test_unit">
+
+<ol class="questions">
+  
+
+
+
+
+  <li class="question" id="question0" style="display: list-item;">
+    
+	    <div class="questionCount">
+	    	Вопрос 
+	    	<span class="current">1</span> 
+	    	из 
+	    	<span class="total">25</span>
+	    </div>
+    
+    <h3>1. Как при помощи клавиш ввести координаты первой точки отрезка в системе КОМПАС?</h3>
+    
+    <ul class="answers">
+      <li>
+      	<input id="slickQuiz_question0_0" name="slickQuiz_question0" type="radio"> 
+      	<label for="slickQuiz_question0_0">Нажать Alt +1 и вести значение первой точки</label>
+      </li>
+      
+      <li>
+      	<input id="slickQuiz_question0_1" name="slickQuiz_question0" type="radio"> 
+      	<label for="slickQuiz_question0_1">Нажать Таb+1 и вести значение первой точки</label>
+      </li>
+
+      <li>
+      	<input id="slickQuiz_question0_2" name="slickQuiz_question0" type="radio"> 
+      	<label for="slickQuiz_question0_2">Нажать Enter+1 и вести значение первой точки</label>
+      </li>
+
+      <li>
+      	<input id="slickQuiz_question0_3" name="slickQuiz_question0" type="radio"> 
+      	<label for="slickQuiz_question0_3">Не знаю</label>
+      </li>
+    </ul>
+
+    	<a href="#" class="button backToQuestion" role="button">Вернуться назад </a>
+    	<a href="#" class="button nextQuestion checkAnswer" role="button">Следующий вопрос »</a>
+
+  </li>
+  
+
+
+
+
+  
+</ol>
+
+
+
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ------------ Вкладки ----------------------------			 -->
+	</div>			<!-- right_unit right_unit-normdoc -->
+<!-- </div> -->
+
+
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/umk.js"></script>
+<script src="js/slickQuiz-config.js"></script>
+<script src="js/slickQuiz.js"></script>
+<script src="js/master.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+include includes/mixins
+<!DOCTYPE html>
+html(lang="ru")
+	include includes/head
+	body
+		.wrapper
+			.sidebar
+				include includes/unit_login
+				include includes/sidebar_menu
+				+sidebar "checked"
+			div(class="right_unit", class="right_unit-normdoc")
+				p Нормативные документы
+				.wrap_tab
+					ul.tabs(role="tablist")
+						+tabs('tab1', 'ФГОС', 'tab-content1')
+							+unit_download('../img/fgos_300x150.png','files/normdoc/fgos_09_02_07.pdf')
+						+tabs('tab2', 'Стандарт', 'tab-content3')
+							+unit_download('../img/bg_img.png','../files/normdoc/prof_standart_06.015.pdf')
+						+tabs('tab3', 'Рабочая программа', 'tab-content3')
+							+unit_download('../img/300x150_v11.png','../files/normdoc/comp_graphics_203.pdf')
+							+unit_download('../img/300x150_v12.png','../files/normdoc/comp_graphics_301_2018.pdf')
+							+unit_download('../img/300x150_v12.png','../files/normdoc/comp_graphics_301_2018.pdf')
+							+unit_download()
+							+unit_download()
+							+unit_download()
+							+unit_download()
+							+unit_download()
+							+unit_download()
+							+unit_download()
+					 
+
+						
+
+
+
+		include includes/scripts_in_footer
+		script.
+			$(document).ready(function () {
+			$('#sb_ml-1').prop('checked',true);
+
+			$("a#sub_menu_1-1").attr("href", "#");
+			$("a#sub_menu_1-2").attr("href", "#");
+			$("a#sub_menu_1-3").attr("href", "#");
+			
+			});
+
+

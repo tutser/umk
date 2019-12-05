@@ -1,0 +1,433 @@
+col_grey_up = #f1f0f5
+col_grey_down = #dcdce1
+col_text_link = #26aaf0
+col_side_bar = #15151c
+col_submenu_sidebar = #27273b
+
+@font-face
+	font-family 'Roboto'
+	src:url("../fonts/Roboto/Roboto-Regular.ttf")
+	font-weight 300
+	font-style normal
+
+@font-face
+	font-family 'FontAwesomeReg'
+	src:url("../fonts/FontAwesome/Font_Awesome_5_Free-Regular-400.otf")
+	font-weight 400
+	font-style normal
+
+@font-face
+	font-family 'FontAwesomeSol'
+	src:url("../fonts/FontAwesome/Font_Awesome_5_Free-Solid-900.otf")
+	font-weight 300
+	font-style normal
+
+body
+	font-family Roboto
+	color col_text_link
+	background-color col_grey_down
+	box-sizing border-box
+	// overflow-y scroll
+		
+a
+	text-decoration none
+	outline none
+	cursor pointer
+	color col_text_link
+	
+.sidebar 
+	width 300px
+	height 100vh
+	background-color col_side_bar
+	// border 1px solid red
+	position fixed
+	float left
+	
+.sidebar-hidden
+	width 100px
+	
+.right_unit
+	// border 1px solid orange
+	width calc(100vw - 300px)
+	height 100vh
+	float right
+	
+	// display flex
+	// flex-direction row
+	// justify-content center
+	// align-items center
+	.index_p 
+		color white
+		// font-size 4.0em
+		// border 1px solid red 
+		// width 500px
+		// line-height 1.2em
+		// position relative
+		// top -100px
+		// left -200px
+		// margin-top -200px
+		// margin-right 200px
+		width 600px
+		margin 150px 50px 10px 200px
+		font-size 3.9em
+		line-height 1.3em
+		
+
+.right_unit-hidden
+	width calc(100vw - 100px)
+
+//----------- Блок Логин и кнопка сворачивания sidebar ---------------------------------
+.wrap_unit_login 
+	transition .5s
+	// border 1px solid orange
+	padding 3px
+	
+.wrap_unit_login-hidden
+	display none
+	transition .5s
+
+.unit_login-hidden
+	display none
+	transition .5s
+
+.unit_login
+	// border 1px solid red
+	transition .5s
+	margin 10px
+	display flex
+	// flex-direction row
+	align-items center
+	transition .5s
+	a 
+		color white
+	a:hover 
+		color col_text_link
+
+.user-avatar
+	// width 80px
+	// height 80px
+	// border 1px solid green
+	// padding 10px 0px 10px 10px
+		
+.wrap-btns
+	// width 130px
+	display flex
+	flex-direction column
+	// justify-content center
+	// border 1px solid red
+	a 
+		color white
+	a:hover 
+		color col_text_link
+
+.login-btn
+	padding 5px 0px 7px 10px
+		
+.registr-btn
+	padding 5px 0px 7px 10px
+			
+.wrap_menu-btn
+	position absolute
+	top 10px
+	right 10px
+	transition 0.5s
+	a 
+		display block
+		width 30px
+		height 30px		
+	
+.wrap_menu-btn_active
+	right 36px
+	top 20px
+	
+.menu-btn
+	span::after, span::before
+		position absolute
+		left 13px
+		top -1px
+		content ''
+		height 33px
+		width 3px
+		background-color #ffffff
+	span::before
+		transform rotate(45deg)
+	span::after
+		transform rotate(-45deg)
+
+.menu-btn_active
+	span, span::after, span::before
+		position absolute
+		top 50%
+		margin-top -1px
+		left 50%
+		margin-left -15px
+		width 30px
+		height 2px
+		background-color #fff
+	span::before
+		transform translateY(9px)
+	span::after
+		transform translateY(-9px)
+	
+.menu-lable_hidden
+	display none	
+	
+.menu-lable_visible
+	display block
+	position absolute
+	top 20px
+	left -18px
+	margin 15px 10px 10px 10px
+	color #ffffff
+			
+//----------- Блок Логин и кнопка сворачивания sidebar (end) --------------------------------------
+
+// -------------- New Menu Accordion --------------------
+.menu_list-hidden
+	display none
+.sidebar_menu_list
+	a 
+		text-decoration none
+		color white
+	label
+		padding 10px 40px 10px 15px
+		display block
+		cursor pointer
+		color white
+		font-size 1.2em
+		&:hover
+			color col_text_link
+		&::after
+			content: "\f106"
+			font-family "FontAwesomeSol"
+			position absolute
+			right 15px
+			transition 0.3s
+	input
+		display none
+		&:checked + label
+			background-color col_text_link
+			color white
+			&::after
+				transform: rotate(180deg)
+	article
+		background-color col_submenu_sidebar
+		overflow hidden
+		height 0px
+		position relative
+		z-index 10
+		transition height 0.3s ease-in-out, box-shadow 0.6s linear
+	input:checked ~ article.submenu-1
+		height 120px
+	input:checked ~ article.submenu-2
+		height 85px
+	input:checked ~ article.submenu-3
+		height 85px
+	input:checked ~ article.submenu-4
+		height 85px
+	input:checked ~ article.submenu-5
+		height 45px
+.sb_ml > ul > li
+	padding 15px 5px 5px 30px
+	a:hover
+		color link-hover
+		
+	
+// -------------- New Menu Accordion (end) --------------------
+
+.wrap_tab
+	// display inherit
+	// border 1px solid blue
+	margin-top -110px
+	// width calc(100vw - 300px)
+	& > ul 
+		display flex 
+		flex-direction row
+		justify-content center
+		// background-color col_grey_up
+		// border 1px solid red
+		
+		// width calc(100% - 15px)
+		// width 80vw
+		// margin-left 15px
+		
+.tabs
+	list-style none
+	position relative
+	// text-align center
+	// margin-left 10px
+	// border 1px solid red
+	& > li > label 
+		display block
+		text-align center
+		padding 10px
+		margin 10px 10px 50px 10px
+		width 200px
+		color col_text_link
+		border 1px solid col_text_link
+		border-radius 18px
+	input[type="radio"]
+		// position absolute
+		display none
+		// top 0
+		// left -9999px
+
+.tabs_sam
+	& > li > label
+		width 300px
+		
+.tabs .tab-content
+	// z-index 2
+	display none
+	overflow hidden
+	// font-size 16px
+	// line-height 25px
+	// padding 25px
+	position absolute
+	top 100px
+	left 0px
+	// margin 10px
+	// border 1px solid red
+	// text-align center
+	// border-radius 0 0 4px 4px
+	color col_text_link
+	
+.wrap_unit_download
+	display flex
+	flex-direction row 
+	flex-wrap wrap
+	// border 1px solid red
+	// justify-content space-between
+	
+.wrap_unit_download_test
+	display flex
+	flex-direction column 
+	justify-content center
+	// border 1px solid red
+	
+	
+.tabs [id^="tab"]
+	&:checked + label
+		top 0
+		// padding-top 17px
+		background-color col_text_link
+		color white
+		
+.tabs [id^="tab"]:checked ~ [id^="tab-content"]
+	display block
+
+.right_unit-index 
+	background url(../img/fon2.jpg)
+	background-size cover
+	background-position center center
+	overflow hidden
+.right_unit-normdoc
+		background-color col_grey_down
+		& > p
+			height 150px
+			background-color col_grey_up
+			text-align center
+			padding 50px 0 30px 0
+			font-size 2.1em
+			color link-hover
+			// border 1px solid green
+  
+.wrap_file_list
+	margin 30px 10px 10px 30px
+	width 300px
+	height 150px
+	cursor pointer
+	border-radius 5px
+	box-shadow  0 0 1px rgba(0,0,0,0.5)
+	position relative
+	display flex
+	flex-direction row
+	flex-wrap wrap
+	justify-content space-around
+	background url('../img/bg_img.png')
+	&:hover:after
+		content ''
+		position absolute
+		width 300px
+		height 150px
+		border-radius 5px
+		z-index 1
+		background-color rgba(44, 64, 112, 0.5)	
+	&:hover .ul_buttons
+		display block
+		
+
+
+.file_unit
+	display block
+	position relative
+	width 100%
+	height 100%
+	// border 1px solid orange
+	.shadow_box
+		position absolute
+		// top 0
+		left 0
+		right 0
+		z-index 2
+		color white
+		// border 1px solid orange
+		height 50px
+		border-radius 5px 5px 0 0 
+		background-color rgba(44, 64, 112, 0.5)	
+		box-shadow  0 0 1px rgba(0,0,0,0.5)
+		text-align center
+		line-height 50px
+		span 
+			text-align center
+			font-size 1.2em
+			opacity 1
+		&:before
+			content ''
+			position absolute
+			left 0
+			width 300px
+			height 50px
+			// z-index 2
+			// background-color rgba(44, 64, 112, 0.5)	
+	
+		
+.file_unit2
+	display block
+	margin 10px
+	width 300px
+	height 150px
+	cursor pointer
+	border 1px solid black
+		
+	// background url("../img/300x150.png")
+	box-shadow  0 0 1px rgba(0,0,0,0.4)
+	&:hover
+		border 1px solid green
+		background-color  #abebc6 
+		// background url("../img/300x150_blue.png")
+	&:hover .ul_buttons
+		display block
+				
+.ul_buttons
+	display none
+	position relative
+	z-index 2
+	& > ul 
+		display flex
+		flex-direction row
+		justify-content center
+		& > li 
+			margin 87px 10px 30px 10px 
+			border 1px solid link-hover
+			border-radius 8px
+			&:hover a 
+				background-color white
+			& > a 
+				text-decoration none
+				padding 10px
+				border-radius 8px
+				display block
+				color white
+				&:hover 
+					color col_text_link
