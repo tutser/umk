@@ -1,0 +1,38 @@
+include includes/mixins
+<!DOCTYPE html>
+html(lang="ru")
+	include includes/head
+	body
+		.wrapper
+			.sidebar
+				include includes/unit_login
+				include includes/sidebar_menu
+				+sidebar "checked"
+			div(class="right_unit", class="right_unit-normdoc")
+				p Контроль знаний
+				.wrap_tab
+					ul.tabs(role="tablist")
+						+tabs('tab1', 'Контрольная работа', 'tab-content1')
+							+unit_download('#', 'Контрольная работа', '', 'files/teormat/kospect1.pdf')
+							+unit_download('#', 'Контрольная работа', '"Обязательная"', 'files/teormat/kospect1.pdf')
+						
+						
+							
+					 
+
+						
+
+
+
+		include includes/scripts_in_footer
+		script.
+			$(document).ready(function () {
+			$('#sb_ml-3').prop('checked',true);
+
+			$("a#sub_menu_3-1").attr("href", "#");
+		//	$("a#sub_menu_3-2").attr("href", "#");
+			
+			
+			});
+
+
