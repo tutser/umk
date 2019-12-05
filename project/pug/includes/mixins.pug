@@ -22,5 +22,5 @@ mixin unit_download(bg_img, f_name, file_description, link='#')
 						a(href=link type="application/pdf" target="_blank")
 							| Открыть
 					li.download
-						a(href=link type="application/pdf" download)
+						a(href=link type="application/pdf" download=f_name)
 							| Скачать
