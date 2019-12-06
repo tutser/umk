@@ -11,19 +11,18 @@ html(lang="ru")
 			.right_unit.ru_control-test
 				p Тест по дисциплине «Компьютерная графика»
 				.wrap_test_unit
-					div
-						#slickQuiz.test_unit
-							h1.quizName
-							.quizArea
-								.quizHeader
-									a.button.startQuiz Начать тестирование
-							.quizResults
-								h3.quizScore Ваша оценка:
-									span
-								h3.quizLevel 
-									strong Рейтинг: 
-									span
-								.quizResultsCopy
+					.test_unit#slickQuiz
+						h1.quizName
+						.quizArea
+							.quizHeader
+								a.button.startQuiz(href="#") Начать тестирование
+						.quizResults
+							h3.quizScore Ваша оценка:
+								span
+							h3.quizLevel 
+								strong Рейтинг: 
+								span
+							.quizResultsCopy
 
 						
 						
@@ -34,13 +33,14 @@ html(lang="ru")
 
 
 
+		
 		include includes/scripts_in_footer
-		include includes/scripts_for_test
 		script.
 			$(document).ready(function () {
 			$('#sb_ml-3').prop('checked',true);
 
 			$("a#sub_menu_3-1").attr("href", "#");
+			$("#slickQuiz").slickQuiz();
 		
 			
 			

@@ -18,7 +18,7 @@
 
             defaults = {
                 checkAnswerText:  'Проверить ответы!',
-                nextQuestionText: 'Следующий вопрос &raquo;',
+                nextQuestionText: 'Следующий вопрос',
                 backButtonText: 'Вернуться назад ',
                 completeQuizText: 'Закончить тест',
                 tryAgainText: 'Попробовать снова',

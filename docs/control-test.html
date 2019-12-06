@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/reset.css" media="all"/>
     <link rel="stylesheet" href="css/main.css" media="all"/>
     <link rel="stylesheet" href="css/all.css" media="all"/>
+    <link rel="stylesheet" href="css/slickQuiz.css" media="all"/>
     <link rel="stylesheet" href="css/test-style.css" media="all"/>
     <title>УМК</title>
   </head>
@@ -79,17 +80,15 @@
       <div class="right_unit ru_control-test">
         <p>Тест по дисциплине «Компьютерная графика»</p>
         <div class="wrap_test_unit">
-          <div>
-            <div class="test_unit" id="slickQuiz">
-              <h1 class="quizName"></h1>
-              <div class="quizArea">
-                <div class="quizHeader"><a class="button startQuiz">Начать тестирование</a></div>
-              </div>
-              <div class="quizResults">
-                <h3 class="quizScore">Ваша оценка:<span></span></h3>
-                <h3 class="quizLevel"> <strong>Рейтинг: </strong><span></span></h3>
-                <div class="quizResultsCopy"></div>
-              </div>
+          <div class="test_unit" id="slickQuiz">
+            <h1 class="quizName"></h1>
+            <div class="quizArea">
+              <div class="quizHeader"><a class="button startQuiz" href="#">Начать тестирование</a></div>
+            </div>
+            <div class="quizResults">
+              <h3 class="quizScore">Ваша оценка:<span></span></h3>
+              <h3 class="quizLevel"> <strong>Рейтинг: </strong><span></span></h3>
+              <div class="quizResultsCopy"></div>
             </div>
           </div>
         </div>
@@ -97,16 +96,14 @@
     </div>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/umk.js"></script>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/umk.js"></script>
     <script src="js/slickQuiz-config.js"></script>
     <script src="js/slickQuiz.js"></script>
-    <script src="js/master.js"></script>
     <script>
       $(document).ready(function () {
       $('#sb_ml-3').prop('checked',true);
       
-      $("a#sub_menu_3-2").attr("href", "#");
+      $("a#sub_menu_3-1").attr("href", "#");
+      $("#slickQuiz").slickQuiz();
       
       
       

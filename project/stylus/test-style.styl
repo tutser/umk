@@ -1,3 +1,5 @@
+col_grey_up = #f1f0f5
+
 .wrap_test_unit
 	// border 1px solid blue
 	// display flex
@@ -6,12 +8,13 @@
 	// background-color #cccccc
 	// margin 20px 20px 20px 50px
 .test_unit
-	margin-left 30px
+	margin 30px auto
+	width 70%
 	// border 1px solid #26aaf0
 	// border-radius 10px
 	// border-top none
 	// background #fff
-	padding 30px
+	// padding 60px
 	font-size 1.3em
 	// color #353535
 	line-height 1.5em
@@ -45,22 +48,29 @@
 .ru_control-test
 	& > p 
 		// border 1px solid red
+		// text-align center
+		// padding 60px 20px
+		// font-size 1.8em
+		// background-color #f1f0f5
+		height 60px
+		background-color col_grey_up
 		text-align center
-		padding 60px 20px
-		font-size 1.8em
-		background-color #f1f0f5
+		padding 50px 0 30px 0
+		font-size 2.1em
+		color link-hover
 		
 
 	
 
 .startQuiz
+	
 	// margin-top 60px
 
 .question
 	h3 
 		text-align left
 		font-size 1.3em
-		// border 1px solid red
+		// border 1px solid green
 		padding 10px
 	
 .answers
@@ -147,7 +157,7 @@
 		clear both
 		
 .quizResults
-		border 1px solid green
+		// border 1px solid green
 		padding 20px
 	h3 
 		margin 0
@@ -168,7 +178,13 @@
 	span 
 		font-weight bold
 
+.quizArea
+	// border 1px solid green
+	// width 100%
+	
+
 .quizHeader
+	position relative
 	// border 1px solid red
 
 .button
