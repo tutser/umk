@@ -6,12 +6,12 @@ var quizJSON = {
     "info": {
         "name":    "",
         "main":    "",
-        "results": "<h5>Результат</h5><p>Рекомендация по результату.</p>",
-        "level1":  "24 / 25",
-        "level2":  "20 / 23",
-        "level3":  "15 / 19",
-        "level4":  "0 / 14",
-        "level5":  "0 / 0" // no comma here
+        "results": "",
+        "level1":  "5",
+        "level2":  "4",
+        "level3":  "3",
+        "level4":  "2",
+        "level5":  "2" // no comma here
     },
     "questions": [
         { // Вопрос 1 - Множественный выбор. Один правильный ответ
@@ -39,7 +39,7 @@ var quizJSON = {
         { // Вопрос 3 - Множественный выбор. Один правильный ответ
             "q": "Для завершения текущей команды ввода или редактирования системе КОМПАС нужно выполнить одно из следующих действий:",
             "a": [
-                {"option": "Нажать клавишу <Esc>",  "correct": false},
+                {"option": "Нажать клавишу Esc",  "correct": false},
                 {"option": "Нажать Enter",          "correct": true},
                 {"option": "Нажать Таb",            "correct": false},
                 {"option": "Не знаю",               "correct": false} // no comma here
@@ -63,7 +63,7 @@ var quizJSON = {
             "a": [
                 {"option": "Выбрать команду Удалить / Вспомогательные кривые и точки",   "correct": true},
                 {"option": "Выбрать команду Редактировать",                              "correct": false},
-                {"option": "Нажать клавишу <Delete>",                                    "correct": false},
+                {"option": "Нажать клавишу Delete",                                    "correct": false},
                 {"option": "Не знаю",                                                    "correct": false} // no comma here
             ],
             "correct": "<p><span>Правильно!</span> Нажать ..... и вести значение первой точки!</p>",

@@ -1,7 +1,8 @@
 .test_unit {
   margin: 30px auto;
-  width: 70%;
-  font-size: 1.3em;
+  width: 80%;
+  font-size: 1.5em;
+  position: relative;
   line-height: 1.5em;
 }
 .test_unit h1 {
@@ -13,8 +14,8 @@
   margin: 15px 0;
 }
 .test_unit h3 {
-  font-size: 18px;
-  margin: 15px 0 10px;
+  font-size: 1.5em;
+  margin: 15px 0 10px 0px;
 }
 .test_unit h4 {
   font-size: 16px;
@@ -135,9 +136,6 @@ h3 span {
 .questionCount {
   font-size: 1.2em;
   text-align: center;
-}
-.questionCount .current {
-  color: #f00;
 }
 .questionCount span {
   font-weight: bold;

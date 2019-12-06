@@ -31,7 +31,7 @@
                 numberOfQuestions: null,
                 randomSortQuestions: false, // случайно сортировать вопросы
                 randomSortAnswers: false, // случайно сортировать ответы
-                preventUnanswered: false, // предупреждать о "без ответа"  (модальное окно)
+                preventUnanswered: true, // предупреждать о "без ответа"  (модальное окно)
                 disableScore: false, // выключить результаты
                 disableRanking: false,
                 scoreAsPercentage: false, // результат в процентах
