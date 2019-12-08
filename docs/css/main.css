@@ -44,13 +44,6 @@ a {
   height: 100vh;
   float: right;
 }
-.right_unit .index_p {
-  color: #fff;
-  width: 600px;
-  margin: 150px 50px 10px 200px;
-  font-size: 3.9em;
-  line-height: 1.3em;
-}
 .right_unit-hidden {
   width: calc(100vw - 100px);
 }
@@ -332,6 +325,15 @@ a {
   background-size: cover;
   background-position: center center;
   overflow: hidden;
+  position: relative;
+}
+.right_unit-index .index_p {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  color: #fff;
+  font-size: 3.9em;
+  line-height: 1.3em;
 }
 .right_unit-normdoc {
   background-color: #dcdce1;
