@@ -1,15 +1,19 @@
-let gulp         = require('gulp'),
-    pug          = require('gulp-pug'),
-    sass         = require('gulp-sass'),
-    stylus       = require('gulp-stylus'),
-    browserSync  = require('browser-sync'),
-    autoprefixer = require('gulp-autoprefixer');
+let gulp          = require('gulp'),
+    pug           = require('gulp-pug'),
+    sass          = require('gulp-sass'),
+    stylus        = require('gulp-stylus'),
+    browserSync   = require('browser-sync'),
+    ghpages       = require('gh-pages');
+    autoprefixer  = require('gulp-autoprefixer');
+
+gulp.task('ghpages', function() {
+  return ghpages.publish('docs', function(err) {})
+});
+  
 
 gulp.task('pug', function () {
   return gulp.src('./project/pug/*.pug')
-    .pipe(pug({
-      pretty: true
-    }))
+    .pipe(pug({ pretty: true }))
     .pipe(gulp.dest('docs'))
     .pipe(browserSync.reload({stream: true}))
 });
