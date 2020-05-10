@@ -42,8 +42,8 @@ a
 	// border 1px solid red
 	position fixed
 	float left
-  @media screen and (min-width: 600px)
-    display none
+  
+    
 	
 .sidebar-hidden
 	width 100px
@@ -453,7 +453,27 @@ a
 				color white
 				&:hover 
 					color col_text_link
-
-
-// @media only screen and (max-width: 1920px) and (min-width: 1024px)
-// @media screen and (min-width: 600px)
+          
+// @media only screen and (min-width: 760px) and (max-width: 1000px)
+@media only screen and (max-width: 1024px) {
+    .sidebar {
+      width 0px
+      }
+      .unit_login, .sidebar_menu_list {
+        display none
+      }
+      .right_unit {
+        width 100vw
+      }
+      .right_unit-index .index_p {
+		    // position absolute
+		    top 30%
+		    right 50%
+      }
+      .menu-lable_hidden {
+	      display block	
+      }
+      .wrap_menu-btn {
+        z-index 100
+      }
+    }
