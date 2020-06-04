@@ -332,7 +332,6 @@ a {
   top: 10%;
   right: 10%;
   color: #fff;
-  border: 1px solid #f00;
   font-size: 3.9em;
   line-height: 1.3em;
 }
@@ -482,10 +481,10 @@ a {
   .right_unit-index .index_p {
     position: relative;
   }
-  .menu-lable_hidden {
+  .right_unit-index .index_p .menu-lable_hidden {
     display: block;
   }
-  .wrap_menu-btn {
+  .right_unit-index .index_p .wrap_menu-btn {
     z-index: 100;
   }
 }

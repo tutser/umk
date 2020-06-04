@@ -1,58 +1,58 @@
-let gulp          = require('gulp'),
-    pug           = require('gulp-pug'),
-    sass          = require('gulp-sass'),
-    stylus        = require('gulp-stylus'),
-    browserSync   = require('browser-sync'),
-    ghpages       = require('gh-pages');
-    autoprefixer  = require('gulp-autoprefixer');
+let gulp = require('gulp'),
+  pug = require('gulp-pug'),
+  sass = require('gulp-sass'),
+  stylus = require('gulp-stylus'),
+  browserSync = require('browser-sync'),
+  ghpages = require('gh-pages');
+autoprefixer = require('gulp-autoprefixer');
 
-gulp.task('ghpages', function() {
-  return ghpages.publish('docs', function(err) {})
+gulp.task('ghpages', function () {
+  return ghpages.publish('docs', function (err) { })
 });
-  
+
 
 gulp.task('pug', function () {
   return gulp.src('./project/pug/*.pug')
     .pipe(pug({ pretty: true }))
     .pipe(gulp.dest('docs'))
-    .pipe(browserSync.reload({stream: true}))
+    .pipe(browserSync.reload({ stream: true }))
 });
 
 gulp.task('stylus', function () {
   return gulp.src('./project/stylus/**/*.styl')
     .pipe(stylus())
     .pipe(autoprefixer({
-      overrideBrowserslist: ['last 3 versions']
+      overrideBrowserslist: ['last 9 versions']
     }))
     .pipe(gulp.dest('./docs/css/'))
-    .pipe(browserSync.reload({stream: true}))
+    .pipe(browserSync.reload({ stream: true }))
 });
 
 
 
-gulp.task('html', function(){
+gulp.task('html', function () {
   return gulp.src('./docs/*.html')
-  .pipe(browserSync.reload({stream: true}))
+    .pipe(browserSync.reload({ stream: true }))
 });
 
-gulp.task('script', function(){
+gulp.task('script', function () {
   return gulp.src('./docs/js/*.js')
-  .pipe(browserSync.reload({stream: true}))
+    .pipe(browserSync.reload({ stream: true }))
 });
 
 
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', function () {
   browserSync.init({
-      server: {
-          baseDir: "docs/"
-      }
+    server: {
+      baseDir: "docs/"
+    }
   });
 });
 
 
 
-gulp.task('watch', function(){
+gulp.task('watch', function () {
   gulp.watch('./project/stylus/**/*.styl', gulp.parallel('stylus'));
   // gulp.watch('app/scss/**/*.scss', gulp.parallel('scss'));
   gulp.watch('./project/**/*.pug', gulp.parallel('pug'));
