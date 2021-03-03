@@ -18,7 +18,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-stylus": "^2.7.0",
     "node-sass": "^4.13.0",
-    "pug": "^2.0.4"
+    "pug": "^3.0.1"
   },
   "dependencies": {}
 }
